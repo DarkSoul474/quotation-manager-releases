@@ -2,25 +2,30 @@
   "manifest_version": 1,
   "product": "Quotation Manager",
   "channel": "stable",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "minimum_version": "1.0.9",
   "schema_version": 8,
-  "published_at": "2026-09-05T22:14:18Z",
+  "published_at": "2026-09-05T22:31:12Z",
   "release_notes": [
-    "Adds a live determinate progress bar during OTA download and preparation, including transferred MB for the target and rollback installers.",
-    "Keeps a visible Quotation Manager Update window on screen after the main app closes so the update transition no longer looks like a crash.",
-    "Shows clear stages for installing, restarting, validating the updated application, completing the update, and restoring the previous version if rollback is required.",
-    "Uses an indeterminate installation bar when Inno Setup cannot provide a trustworthy percentage instead of displaying a fake progress value.",
-    "Fixes the shared scrolling surface so mouse-wheel scrolling moves in small consistent increments and supports precision touchpad input without large visual jumps.",
-    "Update-manifest checks now send explicit no-cache/revalidation headers and a local cache-busting query value to reduce stale latest.json responses.",
+    "Fixes the shared scroll surface so content cannot visually jump outside its valid top and bottom boundaries.",
+    "Uses explicit pixel-position clamping rather than Tk canvas unit scrolling near short-content boundaries.",
+    "Prevents scrolling when the complete page already fits within the visible viewport.",
+    "Preserves smooth mouse-wheel behavior and precision touchpad support from v1.0.11.",
+    "Applies the fix centrally to shared scrollable screens including Dashboard, Quotation and Proforma.",
+    "The v1.0.11 update progress, visible restart/validation window, cache-revalidated manifest checks, backup validation and rollback protections remain unchanged.",
     "Database schema remains 8; calculations, numbering, exports, document renderers, templates, revisions, and cancellation workflows are unchanged."
   ],
   "installer": {
-    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.11/Quotation_Manager_Setup_v1.0.11.exe",
-    "sha256": "dfe8a42bca1571f5f3cc6179aed78d45237d1f0f169bd8c6301967961fe1d234",
-    "size_bytes": 38594974
+    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.12/Quotation_Manager_Setup_v1.0.12.exe",
+    "sha256": "bc1f77c705ec3b864ef1b169f9785a6f1788670ac03cb2548f6d65d78fd41dbc",
+    "size_bytes": 38604052
   },
   "rollback_installers": {
+    "1.0.11": {
+      "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.11/Quotation_Manager_Setup_v1.0.11.exe",
+      "sha256": "dfe8a42bca1571f5f3cc6179aed78d45237d1f0f169bd8c6301967961fe1d234",
+      "size_bytes": 38594974
+    },
     "1.0.10": {
       "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.10/Quotation_Manager_Setup_v1.0.10.exe",
       "sha256": "03cd4ac46474d3dd3fd79f0bada082df96fafab175eeb4f8e3bf15fb6024d998",
