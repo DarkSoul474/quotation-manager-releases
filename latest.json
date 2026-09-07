@@ -2,23 +2,28 @@
   "manifest_version": 1,
   "product": "Quotation Manager",
   "channel": "stable",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "minimum_version": "1.0.9",
   "schema_version": 10,
-  "published_at": "2026-09-07T03:14:12Z",
+  "published_at": "2026-09-07T04:27:08Z",
   "release_notes": [
-    "Fixes the update window layout so the bottom action buttons remain fully visible without requiring manual window resizing, including at common Windows display scaling levels.",
-    "Widens the Bill and Proforma Excel GST-summary SGST column so tax amounts are no longer visually squeezed.",
-    "Centers non-applicable CGST, SGST and IGST dash placeholders in Bill and Proforma PDF and Word GST-summary cells while preserving numeric tax-value alignment.",
-    "Database schema remains 10; numbering, calculations, business data, document lifecycle behavior and installer AppId are unchanged.",
+    "Reorders the Bill/Tax Invoice and Proforma closing financial section so Sub Total Amount, tax totals, Round Off and NET AMOUNT appear before the detailed GST rate-wise summary.",
+    "Applies the new closing-section order consistently across PDF, Word and Excel exports for both Bill/Tax Invoice and Proforma Invoice.",
+    "Keeps the GST rate-wise summary directly underneath the NET AMOUNT block for accounting reference while leaving Bank Details and Amount in Words placement unchanged.",
+    "Database schema remains 10; GST calculations, formulas, numbering, lifecycle behavior, business data and installer AppId are unchanged.",
     "Preserves mandatory pre-update recovery backup, installer checksum/size verification, health validation and verified rollback protections."
   ],
   "installer": {
-    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.1/Quotation_Manager_Setup_v1.1.1.exe",
-    "sha256": "fd3c970a53620de788c1c4cb05cb5dbf0afd8e9466a7f02b4c76d1c58ed4f876",
-    "size_bytes": 39990873
+    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.2/Quotation_Manager_Setup_v1.1.2.exe",
+    "sha256": "234d150f3eadf268611b00cedf97f1bc6c7d5c39ff732c5a6be723c30e5158ad",
+    "size_bytes": 39989650
   },
   "rollback_installers": {
+    "1.1.1": {
+      "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.1/Quotation_Manager_Setup_v1.1.1.exe",
+      "sha256": "fd3c970a53620de788c1c4cb05cb5dbf0afd8e9466a7f02b4c76d1c58ed4f876",
+      "size_bytes": 39990873
+    },
     "1.1.0": {
       "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.0/Quotation_Manager_Setup_v1.1.0.exe",
       "sha256": "4b35e492f9e601a6052e5978a3fc0886efa30df4bbaefe5fd639825d15d52813",
