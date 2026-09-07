@@ -2,27 +2,28 @@
   "manifest_version": 1,
   "product": "Quotation Manager",
   "channel": "stable",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "minimum_version": "1.0.9",
   "schema_version": 10,
-  "published_at": "2026-09-07T01:15:02Z",
+  "published_at": "2026-09-07T03:14:12Z",
   "release_notes": [
-    "Adds a first-class Proforma Invoice workspace with independent PI numbering, history, templates, defaults, export location, revisions, archive/restore and recovery behavior.",
-    "Final Proforma Invoice exports are now single-copy documents with no Customer Copy or Office Copy labels; Tax Invoice retains its existing two-copy behavior.",
-    "Adds side-effect-free Quotation Preview for consistent document review across Quotation, Proforma Invoice and Tax Invoice.",
-    "Widens the Quotation Description column consistently across PDF, Word and Excel exports.",
-    "Adds stable History sorting by ID number, document number, date, customer, status, total amount and last modified, with ascending/descending control and ID-descending as the stable default.",
-    "Fixes Draft deletion eligibility so Draft records can be deleted correctly while non-Draft lifecycle records remain protected.",
-    "Preserves separated Quotation, Proforma and Tax Invoice concrete domains with neutral shared financial and History infrastructure.",
-    "Uses database schema 10. Existing schema-8 installations upgrade through the validated schema 9 to 10 migrations; existing schema-10 Stage 2 R1 data remains compatible.",
-    "Preserves the existing installer AppId, update backup validation, installer checksum/size validation and verified rollback protections."
+    "Fixes the update window layout so the bottom action buttons remain fully visible without requiring manual window resizing, including at common Windows display scaling levels.",
+    "Widens the Bill and Proforma Excel GST-summary SGST column so tax amounts are no longer visually squeezed.",
+    "Centers non-applicable CGST, SGST and IGST dash placeholders in Bill and Proforma PDF and Word GST-summary cells while preserving numeric tax-value alignment.",
+    "Database schema remains 10; numbering, calculations, business data, document lifecycle behavior and installer AppId are unchanged.",
+    "Preserves mandatory pre-update recovery backup, installer checksum/size verification, health validation and verified rollback protections."
   ],
   "installer": {
-    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.0/Quotation_Manager_Setup_v1.1.0.exe",
-    "sha256": "4b35e492f9e601a6052e5978a3fc0886efa30df4bbaefe5fd639825d15d52813",
-    "size_bytes": 39992421
+    "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.1/Quotation_Manager_Setup_v1.1.1.exe",
+    "sha256": "fd3c970a53620de788c1c4cb05cb5dbf0afd8e9466a7f02b4c76d1c58ed4f876",
+    "size_bytes": 39990873
   },
   "rollback_installers": {
+    "1.1.0": {
+      "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.0/Quotation_Manager_Setup_v1.1.0.exe",
+      "sha256": "4b35e492f9e601a6052e5978a3fc0886efa30df4bbaefe5fd639825d15d52813",
+      "size_bytes": 39992421
+    },
     "1.0.13": {
       "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.13/Quotation_Manager_Setup_v1.0.13.exe",
       "sha256": "f67fe56f35dcde3ec03f87aa50a40dfd640b9e4b0556bdbff7d2d1a158aba579",
