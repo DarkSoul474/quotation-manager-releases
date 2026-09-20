@@ -5,20 +5,33 @@
   "version": "1.2.0",
   "minimum_version": "1.0.9",
   "schema_version": 10,
-  "published_at": "2026-09-19T00:53:38Z",
+  "published_at": "2026-09-20T01:37:50Z",
   "release_notes": [
-    "Introduces the Qt-based v1.2.0 interface while preserving the existing Quotation Manager data model and schema 10.",
-    "Adds backward-compatible post-update transaction validation for the exact v1.1.3 to v1.2.0 OTA bridge while retaining strict integrity validation for v1.2.0-and-later transactions.",
-    "Standardizes shared UI behavior across pages, dialogs, dropdowns, History, Revision History, responsive layout, hover states and dark-mode palette usage.",
-    "Improves Quotation Word alignment and Proforma/Tax Invoice PDF/Excel Terms & Conditions layout.",
-    "Preserves the hardened OTA HTTPS trust path, hostname verification, certificate verification, TLS 1.2+ requirement, approved-host restrictions, installer SHA-256 verification and size verification."
+    "Major interface modernization: replaces the previous Tkinter presentation layer with PySide6, Qt 6 and Qt Quick/QML while preserving the existing Quotation Manager business logic, data model and schema 10.",
+    "Introduces the unified Sapphire Light and Sapphire Dark design system with shared typography, spacing, rounded surfaces, semantic Quotation/Proforma/Tax Invoice icons and a collapsible hamburger sidebar.",
+    "Adds a shared premium motion system for page changes, dialogs, buttons, navigation and item insertion, with a Reduced Motion preference and stationary-background modal closing.",
+    "Improves Quotation, Proforma Invoice and Tax Invoice editors with more consistent field proportions, rounded fixed table viewports, balanced internal table padding, polished focus states and aligned summary/closing cards.",
+    "Improves History and Revision History with clearer selection, hover and rounded-table treatment, stable scrolling chrome and more readable line-item revision details.",
+    "Improves Templates, Settings, Data & Diagnostics, date controls, dropdowns and dialogs with consistent Qt styling, positioning, focus behavior and Light/Dark theme treatment.",
+    "Improves document output quality: Quotation Word content alignment is normalized, and Proforma/Tax Invoice PDF and Excel Terms & Conditions now size and wrap more reliably.",
+    "Keeps offline Writing Assistance, templates, backup/restore, crash-session recovery, permanent numbering rules, cancellation safeguards and existing user data/settings compatible with the new Qt interface.",
+    "Strengthens OTA certificate handling with Windows native certificate-store verification first and an independent Mozilla CA fallback only for certificate-chain failures; hostname verification, certificate verification and TLS 1.2+ remain mandatory.",
+    "Adds a pinned GitHub Contents API freshness check before declaring the app current, preventing stale Raw-cache data from hiding a newer release while failing closed on conflicting security metadata.",
+    "Preserves the verified v1.1.3 to v1.2.0 upgrade/rollback bridge, mandatory pre-update backup, installer SHA-256 and size validation, post-update startup/schema validation and automatic rollback protections.",
+    "Adds final interaction polish including complete inset focus rings, complete rounded History selection outlines, consistent editor edge spacing and a shared updater status light for checking/current/update-available/error states.",
+    "Installer identity, Local AppData paths and database schema remain unchanged for the in-place upgrade from v1.1.3 to v1.2.0."
   ],
   "installer": {
     "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.2.0/Quotation_Manager_Setup_v1.2.0.exe",
-    "sha256": "1625a6eca3f6039ba04df89a765b064764360e62ed1304feba9de27e658da788",
-    "size_bytes": 134244723
+    "sha256": "25fbc276f186ed75f83d2d8786f5929b62880565c52e977a989c43ea8da6e3d4",
+    "size_bytes": 134258711
   },
   "rollback_installers": {
+    "1.1.3": {
+      "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.3/Quotation_Manager_Setup_v1.1.3.exe",
+      "sha256": "51c256b339ff47431e43dafa3541c132d723e3c6e697f26eb45e1c1df7ff827b",
+      "size_bytes": 40970860
+    },
     "1.1.2": {
       "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.2/Quotation_Manager_Setup_v1.1.2.exe",
       "sha256": "234d150f3eadf268611b00cedf97f1bc6c7d5c39ff732c5a6be723c30e5158ad",
@@ -58,11 +71,6 @@
       "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.0.9/Quotation_Manager_Setup_v1.0.9.exe",
       "sha256": "f9fd77426fcbef98b5c86385cc9a77b5a52b5f5a3747021744dd02c9fa10a63f",
       "size_bytes": 38581589
-    },
-    "1.1.3": {
-      "url": "https://github.com/DarkSoul474/quotation-manager-releases/releases/download/v1.1.3/Quotation_Manager_Setup_v1.1.3.exe",
-      "sha256": "51c256b339ff47431e43dafa3541c132d723e3c6e697f26eb45e1c1df7ff827b",
-      "size_bytes": 40970860
     }
   }
 }
